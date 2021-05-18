@@ -40,7 +40,7 @@ it code.
 The `ctx.body` contains the payload describing the event received from Slack or Discord. It is normalized
 between the two systems to facilite reusing the same code.
 
-```json
+```javascript
 {
   "teamId": "TDFBLCJV9",
   "channelId": "DFNE1FG2E",
