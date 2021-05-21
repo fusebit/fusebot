@@ -1,6 +1,6 @@
 # Welcome to Fusebot!
 
-Fusebot is a flexible way of implementing custom slash commands in Node.js and NPM,
+Fusebot is a flexible way of implementing custom slash commands in Slack and Discord using Node.js and NPM,
 powered by https://fusebit.io.
 
 You can get Fusebot for Slack and Discord from [https://go.fusebit.io/fusebot/](https://go.fusebit.io/fusebot/?utm_source=github.com&utm_medium=referral&utm_campaign=fusebot&utm_content=readme).
