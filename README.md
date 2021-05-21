@@ -106,7 +106,7 @@ const item = await ctx.storage.get("my_data");
 // item is:
 // {
 //    data: { ...object you previously stored... },
-//    etag: "{etag}"
+//    etag: "{etag}" // optional
 // }
 ```
 
