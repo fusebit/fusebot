@@ -106,7 +106,7 @@ const item = await ctx.storage.get("my_data");
 // item is:
 // {
 //    data: { ...object you previously stored... },
-//    etag: "{etag}" // optional
+//    etag: "{etag}"
 // }
 ```
 
@@ -122,7 +122,7 @@ Upserts a named document:
 ```javascript
 const item = {
     data: { ...whatever object you want to store... },
-    etag: "{etag}"
+    etag: "{etag}"  // optional
 };
 await ctx.storage.put(item, "my_data")
 ```
