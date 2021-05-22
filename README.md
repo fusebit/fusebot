@@ -62,8 +62,8 @@ between the two systems to facilite reusing the same code.
   "channelId": "DFNE1FG2E",
   "userId": "UFN96HN1J",
   "userName": "tomek",
-  "text": "hello arg2 arg2 arg3",
-  "args": ["arg2", "arg2", "arg3"],
+  "text": "hello arg1 arg2 arg3",
+  "args": ["arg1", "arg2", "arg3"],
   "native": {
     /* native event received from Slack or Discord */
   }
