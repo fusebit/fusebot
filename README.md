@@ -1,9 +1,19 @@
 # Welcome to Fusebot!
 
-Fusebot is a flexible way of implementing custom slash commands in Slack and Discord using Node.js and NPM,
-powered by https://fusebit.io.
+[Get Fusebot for Discord and Slack](https://fusebot.io)
 
-You can get Fusebot for Slack and Discord from [https://go.fusebit.io/fusebot/](https://go.fusebit.io/fusebot/?utm_source=github.com&utm_medium=referral&utm_campaign=fusebot&utm_content=readme).
+Fusebot is the simplest way to quickly develop custom slash commands for Discord and Slack. Fusebot gives you a Node.js and NPM development environment and takes care of running, scaling, and securing your slash commands. All you need to bring is your code and imagination.
+
+```
+module.exports = async (ctx) => {
+  const r = await Superagent.get("https://sochain.com/api/v2/get_price/DOGE/USD");
+  await ctx.client.send(`:moneybag: DOGE price is ${r.body.data.prices[0].price} USD`);
+};
+```
+
+You interact with Fusebot using the `/fusebot` slash command from Discord or Slack. It enables you to open a browser-based Node.js and NPM development environment to implement any number of custom commands. Once created, the commands can be invoked by anyone in your Slack workspace or Discord guild.
+
+Fusebit was created for developers by developers at [fusebit.io](https://fusebit.io/?utm_source=fusebot&utm_medium=referral&utm_campaign=slack-marketplace) and is free to use. We hope you enjoy it!
 
 ## Programming model
 
@@ -34,6 +44,10 @@ it code.
   }
 }
 ```
+
+## Samples
+
+- [/fusebot coin](samples/coin) - get current value of a digital currency
 
 ### ctx.body
 
