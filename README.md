@@ -47,6 +47,8 @@ it code.
 
 ## Samples
 
+With the power of Node.js and NPM, the sky is the limit. What are you going to build today?
+
 - [/fusebot coin](samples/coin) - get current value of a digital currency
 
 ### ctx.body
