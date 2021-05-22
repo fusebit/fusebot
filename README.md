@@ -1,6 +1,6 @@
 # Welcome to Fusebot!
 
-[Get Fusebot for Discord and Slack](https://fusebot.io)
+[Get Fusebot for Discord or Slack](https://fusebot.io)
 
 Fusebot is the simplest way to quickly develop custom slash commands for Discord and Slack. Fusebot gives you a Node.js and NPM development environment and takes care of running, scaling, and securing your slash commands. All you need to bring is your code and imagination.
 
