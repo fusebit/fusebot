@@ -49,6 +49,7 @@ it code.
 
 With the power of Node.js and NPM, the sky is the limit. What are you going to build today?
 
+- [/fusebot kudos](samples/kudos) - leave kudos for your team members, check ranking, and more
 - [/fusebot coin](samples/coin) - get current value of a digital currency
 
 ### ctx.body
