@@ -1,0 +1,9 @@
+{
+    "engines": {
+      "node": ">= 14"
+    },
+    "dependencies": {
+      "superagent": "6.1.0",
+      "octokit": "1.0.5"
+    }
+  }
