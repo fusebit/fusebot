@@ -62,5 +62,5 @@ const help = async (ctx, optionalMessage) => {
 - /fusebot github-dispatch help - display this help
 e.g.
 /fusebot github-dispatch fusebit/fusebot publish.yaml master`);
-  await ctx.client.send(messageToSend)
+  await ctx.client.send(messageToSend.join('\n'))
 };
