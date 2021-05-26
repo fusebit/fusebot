@@ -51,6 +51,7 @@ With the power of Node.js and npm, the sky is the limit. What are you going to b
 
 - [/fusebot kudos](samples/kudos) - leave kudos for your team members, check ranking, and more
 - [/fusebot coin](samples/coin) - get current value of a digital currency
+- [/fusebot github-dispatch](samples/githubDispatch) - trigger a github action
 
 ### ctx.body
 
