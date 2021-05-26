@@ -1,10 +1,4 @@
 const { Octokit } = require('octokit')
-// argument format
-// /fusebot <user/repo> <workflow_id> <branch/tag name>
-
-// please update this with your own personal access token
-const personalAccessToken = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-
 /**
 * This is the implementation of your Fusebot command.
 * You can run it from Slack with `/fusebot trigger-fusebit-pipeline ...`.
@@ -22,23 +16,27 @@ module.exports = async (ctx) => {
     if (ctx.body.args.length === 0 || ctx.body.args[0] === "help") {
         return help(ctx)
     }
-    const octokit = new Octokit({ auth: personalAccessToken });
-    console.log(ctx.body.args)
-    const userRepo = ctx.body.args[0]
-    const workflowId = ctx.body.args[1]
-    const branchTagName = ctx.body.args[2]
+    if (!ctx.configuration.PAT) {
+        await ctx.client.send("unable to find github PAT in configuration, please set a PAT in configuration with the scope of * on repo and write on action.")
+    }
+    const octokit = new Octokit({ auth: ctx.configuration.PAT });
+    const [userRepo, workflowId, branchTagName] = ctx.body.args
+    if (!userRepo) {
+        await ctx.client.send("Username/repository was not found.")
+    }
+    if (!workflowId) {
+        await ctx.client.send("WorkflowId/workflowFileName was not found.")
+    }
+    if (!branchTagName) {
+        await ctx.client.send("Branch name or tag name was not found.")
+    }
     await octokit.request('POST /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches', {
         owner: userRepo.split("/")[0],
         repo: userRepo.split("/")[1],
         workflow_id: workflowId,
         ref: branchTagName
     })
-    // Parse arguments? - https://github.com/fusebit/fusebot#programming-model
-    // Talk back to Slack/Discord? - https://github.com/fusebit/fusebot#ctxclient
-    // Use an NPM module? - https://github.com/fusebit/fusebot#programming-model
-    // Need storage? - https://github.com/fusebit/fusebot#ctxstorage
-
-    await ctx.client.sendEphemeral(`workflow ${workflowId} on ${userRepo} with branch/tag ${branchTagName} triggered!`)
+    await ctx.client.send(`workflow ${workflowId} on ${userRepo} with branch/tag ${branchTagName} triggered!`)
 };
 
 const help = async(ctx) => {
