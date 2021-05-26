@@ -53,9 +53,9 @@ module.exports = async (ctx) => {
 };
 
 const help = async (ctx, optionalMessage) => {
-  const messageToSend = []
+  let messageToSend = []
   if (optionalMessage) {
-    messageToSend.concat(optionalMessage)
+    messageToSend = messageToSend.concat(optionalMessage)
   }
   messageToSend.push(`
 - /fusebot github-dispatch <username>/<reponame> <workflow id> or <workflow file name ie: publish.yml> <branch name> or <tag name> 
