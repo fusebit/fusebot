@@ -18,7 +18,7 @@ module.exports = async (ctx) => {
         return help(ctx)
     }
     if (!ctx.configuration.HOST || !ctx.configuration.PORT || !ctx.configuration.USERNAME || !ctx.configuration.PASSWORD) {
-        return ctx.client.sendEphemeral("Unable to detect SQL connection settings from configuration.")
+        return ctx.client.sendEphemeral("Unable to detect SQL connection settings from configuration. For more information, please check https://github.com/fusebit/fusebot/tree/main/samples/dataQuery")
     }
     const sqlStatement = ctx.body.args.join(" ")
     try {
@@ -36,6 +36,7 @@ module.exports = async (ctx) => {
         return
     } catch (e) {
         ctx.client.send("Something went wrong when trying to execute the queries.")
+        ctx.client.sendEphemeral(e.message)
     }
 };
 
