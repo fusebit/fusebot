@@ -36,7 +36,7 @@ module.exports = async (ctx) => {
         workflow_id: workflowId,
         ref: branchTagName
     })
-    await ctx.client.send(`workflow ${workflowId} on ${userRepo} with branch/tag ${branchTagName} triggered!`)
+    await ctx.client.send(`workflow ${workflowId} on ${userRepo} triggered with branch/tag ${branchTagName}!`)
 };
 
 const help = async(ctx) => {
