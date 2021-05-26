@@ -1,0 +1,9 @@
+{
+    "engines": {
+      "node": ">= 14"
+    },
+    "dependencies": {
+      "superagent": "6.1.0",
+      "promise-mysql": "5.0.3"
+    }
+  }
