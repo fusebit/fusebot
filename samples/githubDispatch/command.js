@@ -1,7 +1,7 @@
 const { Octokit } = require("octokit");
 /**
 * This is the implementation of your Fusebot command.
-* You can run it from Slack with `/fusebot trigger-fusebit-pipeline ...`.
+* You can run it from Slack with `/fusebot github-dispatch ...`.
 * Fusebot is powered by the Fusebit integration platform, https://fusebit.io/
 * 
 * Docs and samples are at https://github.com/fusebit/fusebot
@@ -18,25 +18,24 @@ module.exports = async (ctx) => {
   }
   if (!ctx.configuration.PAT) {
     await ctx.client.send(
-      "unable to find github PAT in configuration, please set a PAT in configuration with the scope of * on repo and write on action."
+      "Unable to find github PAT in configuration, please refer to https://github.com/fusebit/fusebot/blob/main/samples/githubDispatch/README.md for detail."
     );
   }
   const octokit = new Octokit({ auth: ctx.configuration.PAT });
   const [userRepo, workflowId, branchTagName] = ctx.body.args;
-  let isError = false;
+  let errorMessages = []
   if (!userRepo) {
     isError = true;
-    await ctx.client.send("Username/repository was not found.");
+    errorMessages.push("Username/repository was not found.");
   }
   if (!workflowId) {
-    isError = true;
-    await ctx.client.send("WorkflowId/workflowFileName was not found.");
+    errorMessages.push("WorkflowId/workflowFileName was not found.");
   }
   if (!branchTagName) {
-    isError = true;
-    await ctx.client.send("Branch name or tag name was not found.");
+    errorMessages.push("Branch name or tag name was not found.");
   }
-  if (isError) {
+  if (errorMessages.length !== 0) {
+    await help(ctx, errorMessages);
     return;
   }
   await octokit.request(
@@ -49,14 +48,19 @@ module.exports = async (ctx) => {
     }
   );
   await ctx.client.send(
-    `workflow ${workflowId} on ${userRepo} triggered with branch/tag ${branchTagName}!`
+    `Workflow ${workflowId} on ${userRepo} triggered with branch/tag ${branchTagName}!`
   );
 };
 
-const help = async (ctx) => {
-  await ctx.client.send(`
+const help = async (ctx, optionalMessage) => {
+  const messageToSend = []
+  if (optionalMessage) {
+    messageToSend.concat(optionalMessage)
+  }
+  messageToSend.push(`
 - /fusebot github-dispatch <username>/<reponame> <workflow id> or <workflow file name ie: publish.yml> <branch name> or <tag name> 
 - /fusebot github-dispatch help - display this help
 e.g.
 /fusebot github-dispatch fusebit/fusebot publish.yaml master`);
+  await ctx.client.send(messageToSend)
 };
