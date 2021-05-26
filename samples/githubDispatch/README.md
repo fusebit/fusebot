@@ -1,6 +1,6 @@
 # /fusebot github-dispatch <user/repo> <workflow_id> <branch/tag name>
 
-This command triggers a github action with workflow_trigger action.
+This command triggers a github action through a workflow_trigger.
 
 1. Type `/fusebot edit github-dispatch`.
 2. Click the _edit_ link.
