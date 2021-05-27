@@ -31,7 +31,7 @@ module.exports = async (ctx) => {
         const results = await conn.query(sqlStatement)
         const length = results.length;
         results.splice(20);
-        await ctx.client.send(JSON.stringify(results).split('},{').join('}\n{'));
+        await ctx.client.send(results.map(row => JSON.stringify(row) + '\n').join());
         if (length > 20) {
             await ctx.client.send(`:red_circle: truncated. Query returned ${length} results, showing only first 20.`);
         }
