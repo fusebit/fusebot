@@ -1,6 +1,5 @@
 # Welcome to Fusebot! <a href="https://fusebit.io/careers?utm_source=github.com&utm_medium=referral&utm_campaign=fusebot-readme&utm_content=careers"><img src="https://cdn.fusebit.io/assets/images/fusebot-we-are-hiring-button.png" align="right" height=50em></a>
 
-
 [Get Fusebot for Discord or Slack](https://fusebot.io)
 
 Fusebot is the simplest way to quickly develop custom Slash Commands for Discord and Slack. Fusebot gives you a Node.js and npm development environment and takes care of running, scaling, and securing your Slash Commands. All you need to bring is your code and imagination.
@@ -51,6 +50,7 @@ it code.
 With the power of Node.js and npm, the sky is the limit. What are you going to build today?
 
 - [/fusebot kudos](samples/kudos) - leave kudos for your team members, check ranking, and more
+- [/fusebot status](samples/status) - check and report the status of your systems
 - [/fusebot coin](samples/coin) - get current value of a digital currency
 - [/fusebot github-dispatch](samples/githubDispatch) - trigger a github action
 
