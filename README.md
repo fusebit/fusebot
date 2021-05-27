@@ -43,7 +43,7 @@ described below.
 
 At the time your code executes, we have already done the Slack or Discord signature validation for you, so you can
 focus on the task at hand. Also, we have responded to Slack, so you are not subject to the
-3 second execution limit Slack imposes.
+3 second execution limit those platforms impose.
 
 ```javascript
 module.export = async (ctx) => {
