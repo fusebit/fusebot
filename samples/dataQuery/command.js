@@ -29,22 +29,19 @@ module.exports = async (ctx) => {
             password: ctx.configuration.PASSWORD
         })
         const results = await conn.query(sqlStatement)
-        let totalRows = 0;
-        for (const row of results) {
-            if (totalRows >= 20) {
-                await ctx.client.send("Please limit your SQL query to 20 rows.")
-            }
-            await ctx.client.send(JSON.stringify(row))
-            totalRows++
+        const length = results.length;
+        results.splice(20);
+        await ctx.client.send(JSON.stringify(results).split('},{').join('}\n{'));
+        if (length > 20) {
+            await ctx.client.send(`:red_circle: truncated. Query returned ${length} results, showing only first 20.`);
         }
-        return
     } catch (e) {
         await ctx.client.send("Something went wrong when trying to execute the queries.")
         await ctx.client.sendEphemeral(e.message)
     }
 };
 
-const help = (ctx, optionalMessages) => {
+const help = async (ctx, optionalMessages) => {
     let messagesToSend = [];
     if (optionalMessages) {
         messagesToSend = messagesToSend.concat(optionalMessages)
