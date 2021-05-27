@@ -15,6 +15,21 @@ You interact with Fusebot using the `/fusebot` Slash Command from Discord or Sla
 
 Fusebit was created for developers by developers at [fusebit.io](https://fusebit.io/?utm_source=fusebot&utm_medium=referral&utm_campaign=slack-marketplace) and is free to use. We hope you enjoy it!
 
+## Table of contents
+
+[Samples](#samples)
+[Programming model](#programming-model)
+[Support](#support)
+
+## Samples
+
+With the power of Node.js and npm, the sky is the limit. What are you going to build today?
+
+- [/fusebot kudos](samples/kudos) - leave kudos for your team members, check ranking, and more
+- [/fusebot status](samples/status) - check and report the status of your systems
+- [/fusebot coin](samples/coin) - get current value of a digital currency
+- [/fusebot github-dispatch](samples/githubDispatch) - trigger a github action
+
 ## Programming model
 
 The function exported from `command.js` is the entry point to your Slash Command implementation.
@@ -44,15 +59,6 @@ it code.
   }
 }
 ```
-
-## Samples
-
-With the power of Node.js and npm, the sky is the limit. What are you going to build today?
-
-- [/fusebot kudos](samples/kudos) - leave kudos for your team members, check ranking, and more
-- [/fusebot status](samples/status) - check and report the status of your systems
-- [/fusebot coin](samples/coin) - get current value of a digital currency
-- [/fusebot github-dispatch](samples/githubDispatch) - trigger a github action
 
 ### ctx.body
 
