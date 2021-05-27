@@ -32,7 +32,7 @@ module.exports = async (ctx) => {
         let totalRows = 0;
         for (const row of results) {
             if (totalRows >= 20) {
-                await ctx.client.send("Please limit your SQL query.")
+                await ctx.client.send("Please limit your SQL query to 20 rows.")
             }
             await ctx.client.send(JSON.stringify(row))
             totalRows++
