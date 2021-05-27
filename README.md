@@ -19,7 +19,11 @@ Fusebit was created for developers by developers at [fusebit.io](https://fusebit
 
 [Samples](#samples)  
 [Programming model](#programming-model)  
-[Support](#support)  
+&nbsp;&nbsp;[Receiving data from Slack or Discord](#ctxbody)  
+&nbsp;&nbsp;[Managing secrets and configuration](#ctxconfiguration)  
+&nbsp;&nbsp;[Sending messages back to Slack or Discord](#ctxclient)  
+&nbsp;&nbsp;[Using storage](#ctxstorage)  
+[Support](#support)
 
 ## Samples
 
