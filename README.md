@@ -17,9 +17,9 @@ Fusebit was created for developers by developers at [fusebit.io](https://fusebit
 
 ## Table of contents
 
-[Samples](#samples)
-[Programming model](#programming-model)
-[Support](#support)
+[Samples](#samples)  
+[Programming model](#programming-model)  
+[Support](#support)  
 
 ## Samples
 
