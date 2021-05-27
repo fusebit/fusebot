@@ -1,4 +1,4 @@
-# Welcome to Fusebot! <a href="https://fusebit.io/careers"><img src="https://cdn.fusebit.io/assets/images/fusebot-we-are-hiring-1.png" align="right" height=50em></a>
+# Welcome to Fusebot! <a href="https://fusebit.io/careers"><img src="https://cdn.fusebit.io/assets/images/fusebot-we-are-hiring-button.png" align="right" height=50em></a>
 
 
 [Get Fusebot for Discord or Slack](https://fusebot.io)
