@@ -29,14 +29,18 @@ module.exports = async (ctx) => {
             password: ctx.configuration.PASSWORD
         })
         const results = await conn.query(sqlStatement)
+        let totalRows = 0;
         for (const row of results) {
-            console.log(row)
-            ctx.client.send(JSON.stringify(row))
+            if (totalRows >= 20) {
+                await ctx.client.send("Please limit your SQL query.")
+            }
+            await ctx.client.send(JSON.stringify(row))
+            totalRows++
         }
         return
     } catch (e) {
-        ctx.client.send("Something went wrong when trying to execute the queries.")
-        ctx.client.sendEphemeral(e.message)
+        await ctx.client.send("Something went wrong when trying to execute the queries.")
+        await ctx.client.sendEphemeral(e.message)
     }
 };
 
@@ -50,5 +54,5 @@ const help = (ctx, optionalMessages) => {
 - /fusebot run-query help - display this help
 e.g.
 /fusebot run-query SELECT * FROM fusebot WHERE sample_name="dataQuery";`)
-    ctx.client.send(messagesToSend.join("\n"))
+    await ctx.client.send(messagesToSend.join("\n"))
 }
