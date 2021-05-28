@@ -18,7 +18,6 @@ module.exports = async (ctx) => {
     if (!item || !item.data || !item.data.images) {
       message = `No images registered yet`;
     } else {
-      console.log(item.data.images);
       message = Object.keys(item.data.images)
         .map((k) => `:frame_with_picture:  ${k} => \`${item.data.images[k]}\``)
         .join("\n");
