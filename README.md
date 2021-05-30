@@ -158,7 +158,7 @@ await ctx.storage.put(item, "my_data")
 ```
 
 If you specify the `etag` property (usually by obtaining it from a prior `ctx.storage.get` call), and the
-document in storage has chanegd since then, the call will fail with an exception indicating a conflict.
+document in storage has changed since then, the call will fail with an exception indicating a conflict.
 If you don't specify the `etag` property, any data in storage will be forcefuly overwritten.
 
 You can omit the document name to write to the default document.
