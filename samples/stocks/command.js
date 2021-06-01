@@ -17,6 +17,10 @@ module.exports = async (ctx) => {
   if (ctx.body.args.length === 0 || ctx.body.args[0] === 'help') {
     return help(ctx)
   }
+  if (!ctx.configuration.API_KEY) {
+      await ctx.client.send("API_KEY not found, please refer to https://github.com/fusebit/fusebot/blob/main/samples/stocks/README.md for more information.")
+      return
+  }
   const stockSymbol = ctx.body.args[0]
   const results = await Superagent.get(`https://www.alphavantage.co/query\?function\=GLOBAL_QUOTE\&symbol\=${stockSymbol}\&apikey\=${ctx.configuration.API_KEY}`)
   await ctx.client.send(`${stockSymbol}'s current price is ${results.body['Global Quote']['05. price']}.`)
@@ -24,8 +28,8 @@ module.exports = async (ctx) => {
 
 const help = async (ctx) => {
   await ctx.client.send(`
-- /fusebot stocks <stock symbol>
-- /fusebot stock help - display this help
+- /fusebot stocks <ticker>
+- /fusebot stocks help - display this help
 e.g.
 /fusebot stocks AMC`)
 }
