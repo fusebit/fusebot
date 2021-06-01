@@ -4,7 +4,7 @@
 
 Fusebot is the simplest way to quickly develop custom Slash Commands for Discord and Slack. Fusebot gives you a Node.js and npm development environment and takes care of running, scaling, and securing your Slash Commands. All you need to bring is your code and imagination.
 
-```
+```javascript
 module.exports = async (ctx) => {
   const r = await Superagent.get("https://sochain.com/api/v2/get_price/DOGE/USD");
   await ctx.client.send(`:moneybag: DOGE price is ${r.body.data.prices[0].price} USD`);

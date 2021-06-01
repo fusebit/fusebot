@@ -2,7 +2,7 @@ const Superagent = require("superagent");
 
 /**
 * This is the implementation of your Fusebot command.
-* You can run it from Slack with `/fusebot coin ...`.
+* You can run it from Slack with `/fusebot bitly ...`.
 * Fusebot is powered by the Fusebit integration platform, https://fusebit.io/
 * 
 * Docs and samples are at https://github.com/fusebit/fusebot
