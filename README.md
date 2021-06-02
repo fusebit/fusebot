@@ -35,6 +35,8 @@ With the power of Node.js and npm, the sky is the limit. What are you going to b
 - [/fusebot coin](samples/coin) - get current value of a digital currency
 - [/fusebot github-dispatch](samples/githubDispatch) - trigger a github action
 - [/fusebot run-query](samples/dataQuery) - run SQL queries against MySQL compatible databases
+- [/fusebot reddit](samples/reddit) - search a subreddit for posts
+
 ## Programming model
 
 The function exported from `command.js` is the entry point to your Slash Command implementation.
