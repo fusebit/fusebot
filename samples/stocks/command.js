@@ -22,6 +22,7 @@ module.exports = async (ctx) => {
       return
   }
   const stockSymbol = ctx.body.args[0]
+  // Api docs: https://www.alphavantage.co/documentation/#latestprice
   const results = await Superagent.get(`https://www.alphavantage.co/query\?function\=GLOBAL_QUOTE\&symbol\=${stockSymbol}\&apikey\=${ctx.configuration.API_KEY}`)
   await ctx.client.send(`${stockSymbol}'s current price is ${results.body['Global Quote']['05. price']}.`)
 };
