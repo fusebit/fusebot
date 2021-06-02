@@ -1,4 +1,4 @@
-# /fusebot stocks <ticker>
+# /fusebot stocks &lt;ticker>
 
 This command gets the current USD value of the specified stock.
 
