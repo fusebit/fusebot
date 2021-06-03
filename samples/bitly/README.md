@@ -1,4 +1,4 @@
-# /fusebot status
+# /fusebot bitly {long-url}
 
 This command shortens links using bitly.
 
