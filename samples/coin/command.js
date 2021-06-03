@@ -41,7 +41,7 @@ module.exports = async (ctx) => {
   await ctx.client.send(message);
 };
 
-async function help(ctx) {
+const help = async (ctx) => {
   await ctx.client
     .send(`:information_source: This command gets the current trading value of a digital currency on multiple exchanges.
 Usage: \`/fusebot coin {coin-symbol}\`
@@ -49,4 +49,4 @@ e.g.
 \`/fusebot coin DOGE\`
 \`/fusebot coin BTY\`
 Enjoy!`);
-}
+};
