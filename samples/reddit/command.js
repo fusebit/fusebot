@@ -60,11 +60,11 @@ module.exports = async (ctx) => {
     message += '\nNo results found.'
   }
 
-  await ctx.client.sendEphemeral(message);
+  await ctx.client.send(message);
 };
 
 const help = async (ctx) => {
-  await ctx.client.sendEphemeral(`This command searches a specified subreddit for new posts with titles containing the supplied terms. Usage:
+  await ctx.client.send(`This command searches a specified subreddit for new posts with titles containing the supplied terms. Usage:
 \`\`\`
 /fusebot reddit <subreddit> <term> [<term> ]+
 Example:
