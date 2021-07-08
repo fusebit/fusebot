@@ -1,8 +1,6 @@
 # Welcome to Fusebot! <a href="https://fusebit.io/careers?utm_source=github.com&utm_medium=referral&utm_campaign=fusebot-readme&utm_content=careers"><img src="https://cdn.fusebit.io/assets/images/fusebot-we-are-hiring-button.png" align="right" height=50em></a>
 
-[Get Fusebot for Discord or Slack](https://fusebot.io)
-
-Fusebot is the simplest way to quickly develop custom Slash Commands for Discord and Slack. Fusebot gives you a Node.js and npm development environment and takes care of running, scaling, and securing your Slash Commands. All you need to bring is your code and imagination.
+[Fusebot](https://fusebot.io?utm_source=github.com&utm_medium=referral&utm_campaign=fusebot-readme&utm_content=intro) is the simplest way to quickly develop custom Slash Commands for Discord and Slack. Fusebot gives you a Node.js and npm development environment and takes care of running, scaling, and securing your Slash Commands. All you need to bring is your code and imagination.
 
 ```javascript
 module.exports = async (ctx) => {
@@ -13,11 +11,12 @@ module.exports = async (ctx) => {
 
 You interact with Fusebot using the `/fusebot` Slash Command from Discord or Slack. It enables you to open a browser-based Node.js and npm development environment to implement any number of custom commands. Once created, the commands can be invoked by anyone in your Slack workspace or Discord guild.
 
-Fusebit was created for developers by developers at [fusebit.io](https://fusebit.io/?utm_source=fusebot&utm_medium=referral&utm_campaign=slack-marketplace) and is free to use. We hope you enjoy it!
+Fusebot was created for developers by developers at [fusebit.io](https://fusebit.io/?utm_source=github.com&utm_medium=referral&utm_campaign=fusebot-readme&utm_content=company) and is free to use. We hope you enjoy it!
 
 ## Table of contents
 
-[Samples](#samples)  
+[Installing Fusebot](#installing-fusebot)  
+[Command Samples](#command-samples)  
 [Programming model](#programming-model)  
 &nbsp;&nbsp;[Receiving data from Slack or Discord](#ctxbody)  
 &nbsp;&nbsp;[Managing secrets and configuration](#ctxconfiguration)  
@@ -25,7 +24,13 @@ Fusebit was created for developers by developers at [fusebit.io](https://fusebit
 &nbsp;&nbsp;[Using storage](#ctxstorage)  
 [Support](#support)
 
-## Samples
+## Installing Fusebot
+1. [Download Fusebot on Discord or Slack](https://fusebot.io?utm_source=github.com&utm_medium=referral&utm_campaign=fusebot-readme&utm_content=install)
+2. Run ```/fusebot coin DOGE``` to test command
+3. Run ```/fusebot edit coin``` to review code
+4. Run ```/fusebot help``` get started on your first command
+
+## Command samples
 
 With the power of Node.js and npm, the sky is the limit. What are you going to build today?
 
@@ -230,5 +235,4 @@ await ctx.storage.delete("/a/b", true, true);
 
 ## Support
 
-You can share your thoughts or ask questions using `/fusebot feedback` command, or by going to
-https://fusebit.io/contact.
+You can share your thoughts or ask questions using `/fusebot feedback` command, [contacting the Fusebit team](https://fusebit.io/contact?utm_source=github.com&utm_medium=referral&utm_campaign=fusebot-readme&utm_content=support).
