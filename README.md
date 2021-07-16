@@ -2,13 +2,6 @@
 
 [Fusebot](https://fusebot.io?utm_source=github.com&utm_medium=referral&utm_campaign=fusebot-readme&utm_content=intro) is the simplest way to quickly develop custom Slash Commands for Discord and Slack. Fusebot gives you a Node.js and npm development environment and takes care of running, scaling, and securing your Slash Commands. All you need to bring is your code and imagination.
 
-```javascript
-module.exports = async (ctx) => {
-  const r = await Superagent.get("https://sochain.com/api/v2/get_price/DOGE/USD");
-  await ctx.client.send(`:moneybag: DOGE price is ${r.body.data.prices[0].price} USD`);
-};
-```
-
 You interact with Fusebot using the `/fusebot` Slash Command from Discord or Slack. It enables you to open a browser-based Node.js and npm development environment to implement any number of custom commands. Once created, the commands can be invoked by anyone in your Slack workspace or Discord guild.
 
 Fusebot was created for developers by developers at [fusebit.io](https://fusebit.io/?utm_source=github.com&utm_medium=referral&utm_campaign=fusebot-readme&utm_content=company) and is free to use. We hope you enjoy it!
@@ -27,8 +20,53 @@ Fusebot was created for developers by developers at [fusebit.io](https://fusebit
 ## Installing Fusebot
 1. [Download Fusebot on Discord or Slack](https://fusebot.io?utm_source=github.com&utm_medium=referral&utm_campaign=fusebot-readme&utm_content=install)
 2. Run ```/fusebot coin DOGE``` to test command
-3. Run ```/fusebot edit coin``` to review code
-4. Run ```/fusebot help``` get started on your first command
+3. Run ```/fusebot edit coin``` and click the edit link to review how the code works
+
+## Code your first command
+
+Now that you have Fusebot installed and you tested the ```/fusebot coin``` command, let's get started on building your first custom command. Let's build a command search reddit. It is best to do development on a desktop browser as you will have more room to work with tabs and copy/paste code.
+
+1. Type ```/fusebot edit reddit``` and hit enter
+
+![image](https://user-images.githubusercontent.com/751491/126013119-033caee3-d6bd-4dcf-be6b-8025fe655261.png)
+
+2. Click the "click here" link
+
+![image](https://user-images.githubusercontent.com/751491/126013074-30368c7a-e5e2-4c86-a83d-979c2453c906.png)
+
+Your browser will open a window like this:
+
+![image](https://user-images.githubusercontent.com/751491/126013397-720bfe76-1909-4f9e-8a3a-2ccd554e835f.png)
+
+3. Open this [command.js file](https://github.com/fusebit/fusebot/blob/main/samples/reddit/command.js) in another tab
+
+![image](https://user-images.githubusercontent.com/751491/126013219-d0f5169b-ae65-4a63-b8d0-afda9dc04369.png)
+
+4. Copy and paste the entire command.js file content into the command.js file in the web editor.
+
+Copy:
+
+![image](https://user-images.githubusercontent.com/751491/126013286-b83c9435-9341-472b-8f74-4cd156f0d5c7.png)
+
+Paste:
+
+![image](https://user-images.githubusercontent.com/751491/126013734-9bce2ed1-deea-4ab1-bc12-4cca12f703e1.png)
+
+
+5. Click the save icon on the top left of the web editor
+
+![image](https://user-images.githubusercontent.com/751491/126013817-19d128d4-c271-4380-a821-fa67699e1631.png)
+
+
+6. Return back to Slack or Discord to test out your new reddit command
+
+```/fusebot reddit node API```
+
+This command will search for "API" in the node subreddit. 
+
+![image](https://user-images.githubusercontent.com/751491/126014245-03fcebcb-038c-4329-830f-42d14b261c40.png)
+
+BOOM! You've built your first custom command with Fusebot. Check out other examples below and start coding today.
 
 ## Command samples
 
