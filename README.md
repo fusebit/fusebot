@@ -8,9 +8,9 @@ Fusebot was created for developers by developers at [fusebit.io](https://fusebit
 
 ## Table of contents
 
-[Installing Fusebot](#installing-fusebot)
-[Code your first command](#code-your-first-command)
-[Interacting with Fusebot](#interacting-with-fusebot)
+[Installing Fusebot](#installing-fusebot)  
+[Code your first command](#code-your-first-command)  
+[Interacting with Fusebot](#interacting-with-fusebot)  
 [Command code samples](#command-samples)  
 [Programming model](#programming-model)  
 &nbsp;&nbsp;[Receiving data from Slack or Discord](#ctxbody)  
