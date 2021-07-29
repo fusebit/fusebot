@@ -23,7 +23,7 @@ Fusebot was created for developers by developers at [fusebit.io](https://fusebit
 
 ## Installing Fusebot
 
-1. [Download Fusebot on Discord or Slack](https://fusebot.io?utm_source=github.com&utm_medium=referral&utm_campaign=fusebot-readme&utm_content=install)
+1. [Download Fusebot on Discord or Slack](https://fusebot.io?utm_source=github.com&utm_medium=referral&utm_campaign=fusebot-readme&utm_content=install#lp-pom-block-135)
 2. Run ```/fusebot coin DOGE``` to test command
 
 If you see the current value of dogecoin, then Fusebot is successfully installed! Let's move on to coding our first command.
