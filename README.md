@@ -74,6 +74,8 @@ This command will search for "API" in the node subreddit.
 
 ![image](https://user-images.githubusercontent.com/751491/126014245-03fcebcb-038c-4329-830f-42d14b261c40.png)
 
+7. Finally, head on over to [Product Hunt](https://www.producthunt.com/posts/fusebot) and write a review about your experience. ❤️
+
 BOOM! You've built your first custom command with Fusebot. Check out other examples below and start coding today.
 
 ## Interacting with Fusebot
